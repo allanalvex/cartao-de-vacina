@@ -14,15 +14,14 @@ public class Vacina implements Serializable {
 	private int loteVacina;
 	private Date dataVacina;
 
-	private String paciente;
+	private Paciente paciente;
 
 	public Vacina() {
 
 	}
 
 	public Vacina(Integer cpf, String nome, int doseVacina, String nomeVacina, int loteVacina, Date dataVacina,
-			String paciente) {
-		super();
+			Paciente paciente) {
 		this.cpf = cpf;
 		this.nome = nome;
 		this.doseVacina = doseVacina;
@@ -80,12 +79,12 @@ public class Vacina implements Serializable {
 		this.dataVacina = dataVacina;
 	}
 
-	public String getPaciente() {
+	public Paciente getPaciente() {
 		return paciente;
 	}
 
-	public void setPaciente(String paciente) {
-		this.paciente = paciente;
+	public void setPaciente(Paciente pac) {
+		this.paciente = pac;
 	}
 
 	@Override

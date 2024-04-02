@@ -7,31 +7,21 @@ public class Paciente implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Integer cpf;
-	private String nome;
 
 	public Paciente() {
 
 	}
 
-	public Paciente(Integer id, String name) {
-		this.cpf = id;
-		this.nome = name;
+	public Paciente(Integer cpf) {
+		this.cpf = cpf;
 	}
 
-	public Integer getId() {
+	public Integer getCpf() {
 		return cpf;
 	}
 
-	public void setId(Integer id) {
-		this.cpf = id;
-	}
-
-	public String getName() {
-		return nome;
-	}
-
-	public void setName(String name) {
-		this.nome = name;
+	public void setCpf(Integer cpf) {
+		this.cpf = cpf;
 	}
 
 	@Override
@@ -53,7 +43,7 @@ public class Paciente implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Vacina [id=" + cpf + ", name=" + nome + "]";
+		return "Vacina [cpf=" + cpf + "]";
 	}
 
 }
