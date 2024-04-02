@@ -1,13 +1,20 @@
 package application;
 
-import model.entities.Department;
+import java.util.Date;
+
+import model.entities.Paciente;
+import model.entities.Vacina;
 
 public class Program {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Department obj = new Department(1, "Books");
-		System.out.println(obj);
+		Paciente obj = new Paciente(1, "Books");
+
+		
+		Vacina vacina = new Vacina(21, "João", 1, "COVID", 2, new Date(), "OIE");
+		
+		System.out.println(vacina);
 	}
 
 }

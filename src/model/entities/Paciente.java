@@ -3,40 +3,40 @@ package model.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Department implements Serializable {
+public class Paciente implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private Integer id;
-	private String name;
+	private Integer cpf;
+	private String nome;
 
-	public Department() {
+	public Paciente() {
 
 	}
 
-	public Department(Integer id, String name) {
-		this.id = id;
-		this.name = name;
+	public Paciente(Integer id, String name) {
+		this.cpf = id;
+		this.nome = name;
 	}
 
 	public Integer getId() {
-		return id;
+		return cpf;
 	}
 
 	public void setId(Integer id) {
-		this.id = id;
+		this.cpf = id;
 	}
 
 	public String getName() {
-		return name;
+		return nome;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.nome = name;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id);
+		return Objects.hash(cpf);
 	}
 
 	@Override
@@ -47,13 +47,13 @@ public class Department implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Department other = (Department) obj;
-		return Objects.equals(id, other.id);
+		Paciente other = (Paciente) obj;
+		return Objects.equals(cpf, other.cpf);
 	}
 
 	@Override
 	public String toString() {
-		return "Department [id=" + id + ", name=" + name + "]";
+		return "Vacina [id=" + cpf + ", name=" + nome + "]";
 	}
 
 }
