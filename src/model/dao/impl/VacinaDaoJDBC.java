@@ -47,8 +47,8 @@ public class VacinaDaoJDBC implements VacinaDao {
 		PreparedStatement st = null;
 		ResultSet rs = null;
 		try {
-			st = conn.prepareStatement("SELECT vacina.*,paciente.Nome as PacNome " + "FROM vacina INNER JOIN paciente "
-					+ "ON vacina.PacienteCpf = paciente.Cpf " + "WHERE vacina.Cpf = ?");
+			st = conn.prepareStatement("SELECT vacina.*,paciente.Paciente as PacNome " + "FROM vacina INNER JOIN paciente "
+					+ "ON vacina.PacienteCpf = paciente.Cpf " + "WHERE vacina.Cpf = ? ");
 
 			st.setInt(1, cpf);
 			rs = st.executeQuery();
@@ -98,7 +98,7 @@ public class VacinaDaoJDBC implements VacinaDao {
 		PreparedStatement st = null;
 		ResultSet rs = null;
 		try {
-			st = conn.prepareStatement("SELECT vacina.*,paciente.Nome as PacNome " + "FROM vacina INNER JOIN paciente "
+			st = conn.prepareStatement("SELECT vacina.*,paciente.Paciente as PacNome " + "FROM vacina INNER JOIN paciente "
 					+ "ON vacina.PacienteCpf = paciente.Cpf " + "WHERE vacina.Cpf = ? " + "ORDER BY Nome");
 
 			st.setInt(1, paciente.getCpf());
