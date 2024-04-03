@@ -11,7 +11,9 @@ public class Program {
 		
 		VacinaDao vacinaDao = DaoFactory.createVacinaDao();
 
-		Vacina vacina = vacinaDao.findById(3);
+		System.out.println("=== TEST 1: vacina findByCpf ====");
+		
+		Vacina vacina = vacinaDao.findByCpf(3);
 		
 		System.out.println(vacina);
 	}
