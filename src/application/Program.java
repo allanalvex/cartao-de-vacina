@@ -16,13 +16,13 @@ public class Program {
 
 		System.out.println("=== TEST 1: vacina findByCpf ====");
 		
-		Vacina vacina = vacinaDao.findByCpf(123);
+		Vacina vacina = vacinaDao.findByCpf(12345);
 		
 		System.out.println(vacina);
 		
 		System.out.println("\n=== TEST 2: vacina findByPaciente ====");
 		
-		Paciente paciente = new Paciente(123);
+		Paciente paciente = new Paciente(12345);
 		
 		List<Vacina> list = vacinaDao.findByPaciente(paciente);
 		
